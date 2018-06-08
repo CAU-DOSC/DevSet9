@@ -1,0 +1,31 @@
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'idea'
+
+mainClassName = 'Main'
+
+sourceCompatibility = "1.9"
+targetCompatibility = "1.9"
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+jar {
+    baseName = 'DevSet9'
+    version =  '1.0.0'
+    manifest {
+        attributes 'Main-Class' : 'Main', 'Version' : 1.0
+    }
+    archiveName "DevSet9.jar"
+
+    dependsOn configurations.runtime
+    from {
+        configurations.compile.collect {it.isDirectory()? it: zipTree(it)}
+    }
+}
+
+dependencies {
+    testCompile "junit:junit:4.12"
+}
