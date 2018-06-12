@@ -8,6 +8,10 @@ public abstract class IntSet {
     private int maxValue;
 
     protected IntSet(int maxElement, int maxValue) {
+        if (maxElement < 0) {
+            throw new IllegalArgumentException("the number of elements must be greater than 0.");
+        }
+
         this.maxElement = maxElement;
         this.maxValue = maxValue;
     }
