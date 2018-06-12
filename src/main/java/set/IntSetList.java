@@ -1,12 +1,15 @@
 package set;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
  * Represent an unique integer set implemented through a linked-list.
  */
 public class IntSetList extends IntSet {
+    private LinkedList nodes;
+
     /**
      * Initialize a new 'IntSetList' instance.
      * @param maxElement the maximum number of elements.
@@ -14,21 +17,34 @@ public class IntSetList extends IntSet {
      */
     public IntSetList(int maxElement, int maxValue) {
         super(maxElement, maxValue);
+
+        nodes = new LinkedList();
     }
 
     @Override
     public void insert(int number) {
-
+        // insert integer to the set only if it is not already contained,
+        // and the size doesn't exceed the maximum number of elements,
+        // and the number doesn't exceed the maximum value of element.
+        if (nodes.find(number) < 0 && size() < getMaxElement() &&
+            number <= getMaxValue()) {
+            nodes.insertBack(new Node(number));
+        }
     }
 
     @Override
     public int size() {
-        return 0;
+        return nodes.size();
     }
 
     @Override
     public void report(int[] outContainer) {
+        List<Integer> listElements = nodes.getElements();
+        Collections.sort(listElements);
 
+        for (int index = 0; index < outContainer.length; ++index) {
+            outContainer[index] = listElements.get(index);
+        }
     }
 
     private static class LinkedList {
