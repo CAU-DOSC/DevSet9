@@ -68,4 +68,26 @@ public class IntSetListTest {
 
         assertThat(list.size(), is(equalTo(10)));
     }
+
+    @Test
+    public void testOverMaxElementInsert() {
+        IntSetList list = new IntSetList(10, 100);
+
+        for (int i = 0; i < 1000; ++i) {
+            list.insert(i);
+        }
+
+        assertThat(list.size(), is(equalTo(10)));
+    }
+
+    @Test
+    public void testOverMaxValueInsert() {
+        IntSetList list = new IntSetList(10, -1);
+
+        for (int i = 0; i < 1000; ++i) {
+            list.insert(i);
+        }
+
+        assertThat(list.size(), is(equalTo(0)));
+    }
 }
