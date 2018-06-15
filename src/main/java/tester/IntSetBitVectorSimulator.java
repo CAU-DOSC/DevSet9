@@ -1,17 +1,17 @@
 package tester;
 
-import set.IntSetBst;
+import set.IntSetBitVector;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class IntSetBstSimulator extends IntSetSimulator {
+public class IntSetBitVectorSimulator extends IntSetSimulator {
     private static final int MAX_VALUE = 1000000;
     private static final int MAX_ELEMENT = MAX_VALUE / 100;
     private static final int TRY_NUMBER = 35000;
 
-    private static IntSetBst cachedList = null;
+    private static IntSetBitVector cachedList = null;
 
     private static List<Integer> makeRandomElements() {
         List<Integer> elements = new ArrayList<>();
@@ -24,8 +24,8 @@ public class IntSetBstSimulator extends IntSetSimulator {
         return elements;
     }
 
-    private static IntSetBst makeRandomList(Iterable<Integer> elements) {
-    	IntSetBst list = new IntSetBst(MAX_ELEMENT, MAX_VALUE);
+    private static IntSetBitVector makeRandomList(Iterable<Integer> elements) {
+    	IntSetBitVector list = new IntSetBitVector(MAX_ELEMENT, MAX_VALUE);
 
         for (int element : elements) {
             list.insert(element);
@@ -38,7 +38,7 @@ public class IntSetBstSimulator extends IntSetSimulator {
         startSimulate("Initialize");
 
         for (int i = 0; i < TRY_NUMBER; ++i) {
-            new IntSetBst(MAX_ELEMENT, MAX_VALUE);
+            new IntSetBitVector(MAX_ELEMENT, MAX_VALUE);
         }
 
         endSimulate("Initialize");

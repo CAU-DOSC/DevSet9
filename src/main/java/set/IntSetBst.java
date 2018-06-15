@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class IntSetBst extends IntSet {
-	BinarySearchTree root;
+	private BinarySearchTree root;
 
 	public IntSetBst(int maxElement, int maxValue) {
 		super(maxElement, maxValue);

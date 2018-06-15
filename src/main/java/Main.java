@@ -1,3 +1,4 @@
+import tester.IntSetBitVectorSimulator;
 import tester.IntSetBstSimulator;
 import tester.IntSetListSimulator;
 import tester.IntSetSimulator;
@@ -8,5 +9,7 @@ public class Main {
         listSimulator.simulateAll();
         IntSetSimulator bstSimulator = new IntSetBstSimulator();
         bstSimulator.simulateAll();
+        IntSetSimulator bitVectorSimulator = new IntSetBitVectorSimulator();
+        bitVectorSimulator.simulateAll();
     }
 }
