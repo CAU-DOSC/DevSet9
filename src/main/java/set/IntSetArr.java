@@ -1,11 +1,11 @@
 package set;
 
-public class IntSetArray extends IntSet {
+public class IntSetArr extends IntSet {
 
 	private int[] array;
 	int length, max;
 	
-	public IntSetArray(int maxElement, int maxValue) {
+	public IntSetArr(int maxElement, int maxValue) {
 		super(maxElement, maxValue);
 		this.array = new int[maxElement];
 		this.max = maxValue;

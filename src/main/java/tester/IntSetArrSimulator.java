@@ -5,9 +5,9 @@ import java.util.List;
 import java.util.Random;
 
 import set.IntSet;
-import set.IntSetArray;
+import set.IntSetArr;
 
-public class IntSetArraySimulator extends IntSetSimulator {
+public class IntSetArrSimulator extends IntSetSimulator {
     private static final int MAX_VALUE = 100000000;
     private static final int MAX_ELEMENT = MAX_VALUE / 100;
     private static final int TRY_NUMBER = 35000;
@@ -44,7 +44,7 @@ public class IntSetArraySimulator extends IntSetSimulator {
 	public void simulateInitialize() {
         startSimulate("Initialize");
         for (int i = 0; i < TRY_NUMBER; ++i) {
-            new IntSetArray(MAX_ELEMENT, MAX_VALUE);
+            new IntSetArr(MAX_ELEMENT, MAX_VALUE);
         }
         endSimulate("Initialize");
 	}
@@ -59,7 +59,7 @@ public class IntSetArraySimulator extends IntSetSimulator {
 	@Override
 	public void simulateInsert() {
         startSimulate("Insert");
-        cachedCollection = makeRandomCollection(makeRandomElements(), IntSetArray.class);
+        cachedCollection = makeRandomCollection(makeRandomElements(), IntSetArr.class);
         endSimulate("Insert");
 	}
 
