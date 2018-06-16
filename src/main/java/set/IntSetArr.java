@@ -14,20 +14,23 @@ public class IntSetArr extends IntSet {
 	@Override
 	public void insert(int number) {
 		if(length == array.length || number > max) return;
+		for(int i=0;i<this.length;i++) {
+			if(array[i] == number) return;
+		}
 		this.array[length] = number;
 		length++;
 	}
 
 	@Override
 	public int size() {
-		return array.length;
+		return this.length;
 	}
 
 	@Override
 	public void report(int[] outContainer) {
-		sort(0, length);
+		sort(0, length-1);
 
-		for (int index = 0; index < length; ++index) {
+		for (int index = 0; index < outContainer.length; ++index) {
 			outContainer[index] = this.array[index];
 		}
 	}
