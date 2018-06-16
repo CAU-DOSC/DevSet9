@@ -27,7 +27,6 @@ public class IntSetBins extends IntSet {
 	@Override
 	public void insert(int number) {
 		if(number > maxValue || size >= maxElement) return;
-		System.out.println(number/divideNum);
 		ArrayList<Integer> list = bucket.get(number/divideNum);
 		if(list.contains(number)) return;
 		list.add(number);
