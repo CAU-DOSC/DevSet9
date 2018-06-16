@@ -1,3 +1,4 @@
+import tester.IntSetArrSimulator;
 import tester.IntSetBitVectorSimulator;
 import tester.IntSetBstSimulator;
 import tester.IntSetListSimulator;
@@ -7,6 +8,8 @@ public class Main {
     public static void main(String[] args) {
         IntSetSimulator listSimulator = new IntSetListSimulator();
         listSimulator.simulateAll();
+        IntSetSimulator arrSimulator = new IntSetArrSimulator();
+        arrSimulator.simulateAll();
         IntSetSimulator bstSimulator = new IntSetBstSimulator();
         bstSimulator.simulateAll();
         IntSetSimulator bitVectorSimulator = new IntSetBitVectorSimulator();
