@@ -25,19 +25,19 @@ public abstract class IntSetSimulator {
                 simulationName)
         );
 
-        startMemory = runtime.freeMemory();
+        startMemory = runtime.totalMemory() - runtime.freeMemory();
         startTime = System.nanoTime();
     }
 
     protected void endSimulate(String simulationName) {
         Runtime runtime = Runtime.getRuntime();
         long endTime = System.nanoTime();
-        long endMemory = runtime.freeMemory();
+        long endMemory = runtime.totalMemory() - runtime.freeMemory();
 
         double elapsedTime = (double) (endTime - startTime) / 1000000000;
 
         System.out.println(
-            String.format("Used memory = %d bytes.", (startMemory - endMemory))
+            String.format("Used memory = %d bytes.", (endMemory - startMemory))
         );
 
         System.out.println(String.format("Running time = %.3f seconds.", elapsedTime));
