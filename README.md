@@ -41,6 +41,7 @@ Member | 임기찬 | Bit Vector, Binary Search Tree | [dispe1](https://github.co
 - Extend the 'IntSetSimulator' class.
     - It provides all utilities for measuring complexity.
 - Implement abstract methods in the new simulator.
+- Create the new simulation in 'main' method to make it run.
 
 ## Working Environment
 - Java 9
