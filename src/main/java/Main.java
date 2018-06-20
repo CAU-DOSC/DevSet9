@@ -7,19 +7,23 @@ import tester.IntSetSimulator;
 
 public class Main {
     public static void main(String[] args) {
-    	System.out.println("[[Array Simulator]]");
+    	System.out.println("\n[[Array Simulator]]");
         IntSetSimulator arrSimulator = new IntSetArrSimulator();
         arrSimulator.simulateAll();
-    	System.out.println("[[List Simulator]]");
+
+    	System.out.println("\n[[List Simulator]]");
         IntSetSimulator listSimulator = new IntSetListSimulator();
         listSimulator.simulateAll();
-    	System.out.println("[[BST Simulator]]");
+
+        System.out.println("\n[[BST Simulator]]");
         IntSetSimulator bstSimulator = new IntSetBstSimulator();
         bstSimulator.simulateAll();
-    	System.out.println("[[BitVector Simulator]]");
+
+        System.out.println("\n[[BitVector Simulator]]");
         IntSetSimulator bitVectorSimulator = new IntSetBitVectorSimulator();
         bitVectorSimulator.simulateAll();
-    	System.out.println("[[Bins Simulator]]");
+
+        System.out.println("\n[[Bins Simulator]]");
         IntSetSimulator binsSimulator = new IntSetBinsSimulator();
         binsSimulator.simulateAll();
     }
