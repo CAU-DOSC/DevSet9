@@ -9,7 +9,7 @@
     - by using Array structure.
     - by using Bins structure.
     - by using BitVector structure.
-    - by using Binary Search Tree sturcture.
+    - by using Binary Search Tree structure.
     - by using Linked-list structure.
 - Measure time complexity & space complexity of implemented sets.
 
