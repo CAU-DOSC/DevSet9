@@ -1,11 +1,11 @@
 ## Class Diagram
 
-![SetClassDiagram](images/SetClassDiagram.png)
+![SetClassDiagram](images/SetClassDiagram.PNG)
 
 - Each implemented set is represented as 'IntSet...' class.
 - The abstract 'IntSet' class provides all needed interfaces and utilities for concrete 'IntSet' classes.
 
-![SimulatorClassDiagram](images/SimulatorClassDiagram.png)
+![SimulatorClassDiagram](images/SimulatorClassDiagram.PNG)
 
 - There are multiple operation simulators for each implemented set.
 - Each simulator measures the time & space complexity of set.
@@ -16,7 +16,7 @@
 - For each set structure, there are 14 test cases.
 - Below pictures & descriptions stand for only 'IntSetList' test cases, but other data structures have same test formats.
 
-![SmokeTest](images/SmokeTest.png)
+![SmokeTest](images/SmokeTest.PNG)
 
 Test Case   | Type of test   | Description |
 -------|--------|---------------| 
@@ -27,7 +27,7 @@ testInsert | Smoke Test | Tests the single insert operation of set is working co
 testMultipleInsert | Smoke Test | Tests the multiple insert operation of set is working correctly for normal inputs. |
 testNormalElementsReport | Smoke Test | Test the report operation of set is working correctly for normal inputs. |
 
-![BoundaryTest](images/BoundaryTest.png)
+![BoundaryTest](images/BoundaryTest.PNG)
 
 Test Case   | Type of test   | Description |
 -------|--------|---------------| 
@@ -38,7 +38,7 @@ testOverMaxElementInsert | Boundary Test | Tests the insert operations after the
 testOverMaxValueInsert | Boundary Test | Tests the insert operations are ignored correctly when the element exceeds the maximum value of elements. |
 testDuplicateElementsReport | Boundary Test | Tests the report operation is working correctly after the multiple pairs of insert operation for duplicate elements.|
 
-![DetailTest](images/DetailTest.png)
+![DetailTest](images/DetailTest.PNG)
 
 Test Case   | Type of test   | Description |
 -------|--------|---------------| 
@@ -48,23 +48,23 @@ testAlreadySortedElementsReport | Detail Test | Tests the report operation for a
 ## Test Result
 - Test result for 'IntSetArr'.
 
-![IntSetArrTest](images/IntSetArrTest.png)
+![IntSetArrTest](images/IntSetArrTest.PNG)
 
 - Test result for 'IntSetBins'.
 
-![IntSetBinsTest](images/IntSetBinsTest.png)
+![IntSetBinsTest](images/IntSetBinsTest.PNG)
 
 - Test result for 'IntSetBitVector'.
 
-![IntSetBitVectorTest](images/IntSetBitVectorTest.png)
+![IntSetBitVectorTest](images/IntSetBitVectorTest.PNG)
 
 - Test result for 'IntSetBst'.
 
-![IntSetBstTest](images/IntSetBstTest.png)
+![IntSetBstTest](images/IntSetBstTest.PNG)
 
 - Test result for 'IntSetList'.
 
-![IntSetListTest](images/IntSetListTest.png)
+![IntSetListTest](images/IntSetListTest.PNG)
 
 ## Performance Analysis
 - The simulation methods of each simulator class measure complexity of set operations.
@@ -73,17 +73,17 @@ testAlreadySortedElementsReport | Detail Test | Tests the report operation for a
 - At the end of simulation, the timer is stopped.
 - An example of simulation method is shown below.
 
-![SimulationMethod](images/SimulationMethod.png)
+![SimulationMethod](images/SimulationMethod.PNG)
 
 - An example of simulation output is shown below.
 
-![SimulationOutput](images/SimulationOutput.png)
+![SimulationOutput](images/SimulationOutput.PNG)
 
 - The timer behavior is implemented as below in the 'IntSetSimulator' class.
 
-![StartSimulate](images/StartSimulate.png)
+![StartSimulate](images/StartSimulate.PNG)
 
-![EndSimulate](images/EndSimulate.png)
+![EndSimulate](images/EndSimulate.PNG)
 
 ## Performance Analysis Result
 ### Notice
